@@ -2,16 +2,16 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { L2StandardBridge } from "src/L2/L2StandardBridge.sol";
+import { L2StandardBridge } from "@contracts-bedrock/L2/L2StandardBridge.sol";
 
 // Libraries
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import { IERC20Metadata } from "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol";
-import { IOptimismERC20Factory } from "src/L2/interfaces/IOptimismERC20Factory.sol";
-import { IMintableAndBurnableERC20 } from "src/L2/interfaces/IMintableAndBurnableERC20.sol";
+import { IOptimismERC20Factory } from "@contracts-bedrock/L2/interfaces/IOptimismERC20Factory.sol";
+import { IMintableAndBurnableERC20 } from "@contracts-bedrock/L2/interfaces/IMintableAndBurnableERC20.sol";
 
 /// @notice Thrown when the decimals of the tokens are not the same.
 error InvalidDecimals();

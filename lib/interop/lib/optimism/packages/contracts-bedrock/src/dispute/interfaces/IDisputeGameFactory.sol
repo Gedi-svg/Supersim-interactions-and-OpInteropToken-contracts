@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IDisputeGame } from "src/dispute/interfaces/IDisputeGame.sol";
-import "src/dispute/lib/Types.sol";
+import { IDisputeGame } from "@contracts-bedrock/dispute/interfaces/IDisputeGame.sol";
+import "@contracts-bedrock/dispute/lib/Types.sol";
 
 interface IDisputeGameFactory {
     struct GameSearchResult {

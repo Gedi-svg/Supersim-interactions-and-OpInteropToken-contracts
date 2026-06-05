@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IInitializable } from "src/dispute/interfaces/IInitializable.sol";
-import "src/dispute/lib/Types.sol";
+import { IInitializable } from "@contracts-bedrock/dispute/interfaces/IInitializable.sol";
+import "@contracts-bedrock/dispute/lib/Types.sol";
 
 interface IDisputeGame is IInitializable {
     event Resolved(GameStatus indexed status);

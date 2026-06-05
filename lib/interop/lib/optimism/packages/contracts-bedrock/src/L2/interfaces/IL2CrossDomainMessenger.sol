@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { ICrossDomainMessenger } from "src/universal/interfaces/ICrossDomainMessenger.sol";
+import { ICrossDomainMessenger } from "@contracts-bedrock/universal/interfaces/ICrossDomainMessenger.sol";
 
 interface IL2CrossDomainMessenger is ICrossDomainMessenger {
     function MESSAGE_VERSION() external view returns (uint16);

@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IPreimageOracle } from "src/cannon/interfaces/IPreimageOracle.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IPreimageOracle } from "@contracts-bedrock/cannon/interfaces/IPreimageOracle.sol";
 
 /// @title IMIPS
 /// @notice Interface for the MIPS contract.

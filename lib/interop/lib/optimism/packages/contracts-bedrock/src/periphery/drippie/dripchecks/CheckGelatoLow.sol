@@ -2,7 +2,7 @@
 pragma solidity 0.8.15;
 
 import { IDripCheck } from "../IDripCheck.sol";
-import { IGelatoTreasury } from "src/vendor/interfaces/IGelatoTreasury.sol";
+import { IGelatoTreasury } from "@contracts-bedrock/vendor/interfaces/IGelatoTreasury.sol";
 
 /// @title CheckGelatoLow
 /// @notice DripCheck for checking if an account's Gelato ETH balance is below some threshold.

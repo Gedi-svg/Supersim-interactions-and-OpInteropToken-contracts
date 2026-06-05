@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IOptimismERC20Factory } from "src/L2/interfaces/IOptimismERC20Factory.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { IOptimismERC20Factory } from "@contracts-bedrock/L2/interfaces/IOptimismERC20Factory.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @title IOptimismSuperchainERC20Factory
 /// @notice Interface for the OptimismSuperchainERC20Factory contract

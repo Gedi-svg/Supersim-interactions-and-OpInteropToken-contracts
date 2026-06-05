@@ -1,0 +1,89 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.25;
+
+//import "@openzeppelin/contracts/access/Ownable.sol";
+//import "./GovernanceToken.sol";
+import {GovernanceToken} from "@contracts-bedrock/governance/GovernanceToken.sol";
+import { Ownable } from "../lib/interop/lib/optimism/packages/contracts-bedrock/lib/openzeppelin-contracts/contracts/access/Ownable.sol";
+/**
+ * @title  MintManager
+ * @notice Set as `owner` of the OP token and responsible for the token inflation schedule.
+ *         Contract acts as the token "mint manager" with permission to the `mint` function only.
+ *         Currently permitted to mint once per year of up to 2% of the total token supply.
+ *         Upgradable to allow changes in the inflation schedule.
+ */
+contract MintManager is Ownable {
+    /**
+     * @notice The GovernanceToken that the MintManager can mint tokens
+     */
+    GovernanceToken public immutable governanceToken;
+
+    /**
+     * @notice The amount of tokens that can be minted per year. The value is a fixed
+     *          point number with 4 decimals.
+     */
+    uint256 public constant MINT_CAP = 20; // 2%
+
+    /**
+     * @notice The number of decimals for the MINT_CAP.
+     */
+    uint256 public constant DENOMINATOR = 1000;
+
+    /**
+     * @notice The amount of time that must pass before the MINT_CAP number of tokens can
+     *         be minted again.
+     */
+    uint256 public constant MINT_PERIOD = 365 days;
+
+    /**
+     * @notice Tracks the time of last mint.
+     */
+    uint256 public mintPermittedAfter;
+
+    /**
+     * @param _upgrader        The owner of this contract
+     * @param _governanceToken The governance token this contract can mint
+     *                         tokens of
+     */
+    constructor(address _upgrader, address _governanceToken) {
+        transferOwnership(_upgrader);
+        governanceToken = GovernanceToken(_governanceToken);
+    }
+
+    /**
+     * @notice Only the token owner is allowed to mint a certain amount of OP per year.
+     *
+     * @param _account Address to mint new tokens to.
+     * @param _amount  Amount of tokens to be minted.
+     */
+    function mint(address _account, uint256 _amount) public onlyOwner {
+        if (mintPermittedAfter > 0) {
+            require(
+                mintPermittedAfter <= block.timestamp,
+                "MintManager: minting not permitted yet"
+            );
+
+            require(
+                _amount <= (governanceToken.totalSupply() * MINT_CAP) / DENOMINATOR,
+                "MintManager: mint amount exceeds cap"
+            );
+        }
+
+        mintPermittedAfter = block.timestamp + MINT_PERIOD;
+        governanceToken.mint(_account, _amount);
+    }
+
+    /**
+     * @notice Upgrade the owner of the governance token to a new MintManager.
+     *
+     * @param _newMintManager The MintManager to upgrade to.
+     */
+    function upgrade(address _newMintManager) public onlyOwner {
+        require(
+            _newMintManager != address(0),
+            "MintManager: mint manager cannot be the zero address"
+        );
+
+        governanceToken.transferOwnership(_newMintManager);
+    }
+}

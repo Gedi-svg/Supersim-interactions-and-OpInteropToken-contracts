@@ -1,38 +1,38 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { Blueprint } from "src/libraries/Blueprint.sol";
-import { Constants } from "src/libraries/Constants.sol";
+import { Blueprint } from "@contracts-bedrock/libraries/Blueprint.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
 
 import { Initializable } from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IResourceMetering } from "src/L1/interfaces/IResourceMetering.sol";
-import { IBigStepper } from "src/dispute/interfaces/IBigStepper.sol";
-import { IDelayedWETH } from "src/dispute/interfaces/IDelayedWETH.sol";
-import { IAnchorStateRegistry } from "src/dispute/interfaces/IAnchorStateRegistry.sol";
-import { IDisputeGame } from "src/dispute/interfaces/IDisputeGame.sol";
-import { ISystemConfigV160 } from "src/L1/interfaces/ISystemConfigV160.sol";
-import { IAddressManager } from "src/legacy/interfaces/IAddressManager.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IResourceMetering } from "@contracts-bedrock/L1/interfaces/IResourceMetering.sol";
+import { IBigStepper } from "@contracts-bedrock/dispute/interfaces/IBigStepper.sol";
+import { IDelayedWETH } from "@contracts-bedrock/dispute/interfaces/IDelayedWETH.sol";
+import { IAnchorStateRegistry } from "@contracts-bedrock/dispute/interfaces/IAnchorStateRegistry.sol";
+import { IDisputeGame } from "@contracts-bedrock/dispute/interfaces/IDisputeGame.sol";
+import { ISystemConfigV160 } from "@contracts-bedrock/L1/interfaces/ISystemConfigV160.sol";
+import { IAddressManager } from "@contracts-bedrock/legacy/interfaces/IAddressManager.sol";
 
-import { IProxyAdmin } from "src/universal/interfaces/IProxyAdmin.sol";
+import { IProxyAdmin } from "@contracts-bedrock/universal/interfaces/IProxyAdmin.sol";
 
-import { IDelayedWETH } from "src/dispute/interfaces/IDelayedWETH.sol";
-import { IDisputeGameFactory } from "src/dispute/interfaces/IDisputeGameFactory.sol";
-import { IAnchorStateRegistry } from "src/dispute/interfaces/IAnchorStateRegistry.sol";
-import { IFaultDisputeGame } from "src/dispute/interfaces/IFaultDisputeGame.sol";
-import { IPermissionedDisputeGame } from "src/dispute/interfaces/IPermissionedDisputeGame.sol";
-import { Claim, Duration, GameType, GameTypes } from "src/dispute/lib/Types.sol";
+import { IDelayedWETH } from "@contracts-bedrock/dispute/interfaces/IDelayedWETH.sol";
+import { IDisputeGameFactory } from "@contracts-bedrock/dispute/interfaces/IDisputeGameFactory.sol";
+import { IAnchorStateRegistry } from "@contracts-bedrock/dispute/interfaces/IAnchorStateRegistry.sol";
+import { IFaultDisputeGame } from "@contracts-bedrock/dispute/interfaces/IFaultDisputeGame.sol";
+import { IPermissionedDisputeGame } from "@contracts-bedrock/dispute/interfaces/IPermissionedDisputeGame.sol";
+import { Claim, Duration, GameType, GameTypes } from "@contracts-bedrock/dispute/lib/Types.sol";
 
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import { IProtocolVersions } from "src/L1/interfaces/IProtocolVersions.sol";
-import { IOptimismPortal2 } from "src/L1/interfaces/IOptimismPortal2.sol";
-import { ISystemConfig } from "src/L1/interfaces/ISystemConfig.sol";
-import { ISystemConfigV160 } from "src/L1/interfaces/ISystemConfigV160.sol";
-import { IL1CrossDomainMessenger } from "src/L1/interfaces/IL1CrossDomainMessenger.sol";
-import { IL1ERC721Bridge } from "src/L1/interfaces/IL1ERC721Bridge.sol";
-import { IL1StandardBridge } from "src/L1/interfaces/IL1StandardBridge.sol";
-import { IOptimismMintableERC20Factory } from "src/universal/interfaces/IOptimismMintableERC20Factory.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import { IProtocolVersions } from "@contracts-bedrock/L1/interfaces/IProtocolVersions.sol";
+import { IOptimismPortal2 } from "@contracts-bedrock/L1/interfaces/IOptimismPortal2.sol";
+import { ISystemConfig } from "@contracts-bedrock/L1/interfaces/ISystemConfig.sol";
+import { ISystemConfigV160 } from "@contracts-bedrock/L1/interfaces/ISystemConfigV160.sol";
+import { IL1CrossDomainMessenger } from "@contracts-bedrock/L1/interfaces/IL1CrossDomainMessenger.sol";
+import { IL1ERC721Bridge } from "@contracts-bedrock/L1/interfaces/IL1ERC721Bridge.sol";
+import { IL1StandardBridge } from "@contracts-bedrock/L1/interfaces/IL1StandardBridge.sol";
+import { IOptimismMintableERC20Factory } from "@contracts-bedrock/universal/interfaces/IOptimismMintableERC20Factory.sol";
 
 /// @custom:proxied true
 contract OPContractsManager is ISemver, Initializable {

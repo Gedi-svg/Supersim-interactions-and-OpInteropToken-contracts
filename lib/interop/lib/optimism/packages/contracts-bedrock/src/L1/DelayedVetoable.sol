@@ -2,7 +2,7 @@
 pragma solidity 0.8.15;
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @title DelayedVetoable
 /// @notice This contract enables a delay before a call is forwarded to a target contract, and during the delay period

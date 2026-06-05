@@ -1,0 +1,28 @@
+{
+  "name": "supersim-interactions-and-opinteroptoken-contracts",
+  "version": "1.0.0",
+  "description": "- I developed a script for interactions with chains of Supersim like transferring tokens seamlessly between local OP chains. \r - Developed also a sample token that is SuperchainERC20 bridgable called OpInteropToken.\r - When you are working with Supersim and Interop, always consider that you must deploy tokens at the same address in all chains. You can use CREATE2 for this purpose.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mayanfinance/swap-sdk": "^13.2.0",
+    "axios": "^1.14.0",
+    "ethers": "^6.16.0",
+    "viem": "^2.47.6"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/node": "^25.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.2"
+  }
+}

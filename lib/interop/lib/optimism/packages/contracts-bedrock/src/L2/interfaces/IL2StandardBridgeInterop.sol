@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IStandardBridge } from "src/universal/interfaces/IStandardBridge.sol";
-import { ICrossDomainMessenger } from "src/universal/interfaces/ICrossDomainMessenger.sol";
+import { IStandardBridge } from "@contracts-bedrock/universal/interfaces/IStandardBridge.sol";
+import { ICrossDomainMessenger } from "@contracts-bedrock/universal/interfaces/ICrossDomainMessenger.sol";
 
 interface IL2StandardBridgeInterop is IStandardBridge {
     error InvalidDecimals();

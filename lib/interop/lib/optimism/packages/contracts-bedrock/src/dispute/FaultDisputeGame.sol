@@ -5,9 +5,9 @@ pragma solidity 0.8.15;
 import { Math } from "@openzeppelin/contracts/utils/math/Math.sol";
 import { FixedPointMathLib } from "@solady/utils/FixedPointMathLib.sol";
 import { Clone } from "@solady/utils/Clone.sol";
-import { Types } from "src/libraries/Types.sol";
-import { Hashing } from "src/libraries/Hashing.sol";
-import { RLPReader } from "src/libraries/rlp/RLPReader.sol";
+import { Types } from "@contracts-bedrock/libraries/Types.sol";
+import { Hashing } from "@contracts-bedrock/libraries/Hashing.sol";
+import { RLPReader } from "@contracts-bedrock/libraries/rlp/RLPReader.sol";
 import {
     GameStatus,
     GameType,
@@ -22,7 +22,7 @@ import {
     LibClock,
     LocalPreimageKey,
     VMStatuses
-} from "src/dispute/lib/Types.sol";
+} from "@contracts-bedrock/dispute/lib/Types.sol";
 import {
     InvalidParent,
     ClaimAlreadyExists,
@@ -53,13 +53,13 @@ import {
     NoCreditToClaim,
     InvalidOutputRootProof,
     ClaimAboveSplit
-} from "src/dispute/lib/Errors.sol";
+} from "@contracts-bedrock/dispute/lib/Errors.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IDelayedWETH } from "src/dispute/interfaces/IDelayedWETH.sol";
-import { IBigStepper, IPreimageOracle } from "src/dispute/interfaces/IBigStepper.sol";
-import { IAnchorStateRegistry } from "src/dispute/interfaces/IAnchorStateRegistry.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IDelayedWETH } from "@contracts-bedrock/dispute/interfaces/IDelayedWETH.sol";
+import { IBigStepper, IPreimageOracle } from "@contracts-bedrock/dispute/interfaces/IBigStepper.sol";
+import { IAnchorStateRegistry } from "@contracts-bedrock/dispute/interfaces/IAnchorStateRegistry.sol";
 
 /// @title FaultDisputeGame
 /// @notice An implementation of the `IFaultDisputeGame` interface.

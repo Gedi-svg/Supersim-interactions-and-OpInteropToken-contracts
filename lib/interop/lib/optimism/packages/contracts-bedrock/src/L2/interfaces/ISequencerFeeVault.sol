@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { Types } from "src/libraries/Types.sol";
+import { Types } from "@contracts-bedrock/libraries/Types.sol";
 
 interface ISequencerFeeVault {
     event Withdrawal(uint256 value, address to, address from);

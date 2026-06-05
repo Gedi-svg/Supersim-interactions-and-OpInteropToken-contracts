@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IResourceMetering } from "src/L1/interfaces/IResourceMetering.sol";
+import { IResourceMetering } from "@contracts-bedrock/L1/interfaces/IResourceMetering.sol";
 
 /// @notice This interface corresponds to the op-contracts/v1.6.0 release of the SystemConfig
 /// contract, which has a semver of 2.2.0 as specified in

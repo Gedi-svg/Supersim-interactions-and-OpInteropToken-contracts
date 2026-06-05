@@ -2,16 +2,16 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { CrossDomainMessenger } from "src/universal/CrossDomainMessenger.sol";
+import { CrossDomainMessenger } from "@contracts-bedrock/universal/CrossDomainMessenger.sol";
 
 // Libraries
-import { AddressAliasHelper } from "src/vendor/AddressAliasHelper.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { AddressAliasHelper } from "@contracts-bedrock/vendor/AddressAliasHelper.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IL2ToL1MessagePasser } from "src/L2/interfaces/IL2ToL1MessagePasser.sol";
-import { IL1Block } from "src/L2/interfaces/IL1Block.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IL2ToL1MessagePasser } from "@contracts-bedrock/L2/interfaces/IL2ToL1MessagePasser.sol";
+import { IL1Block } from "@contracts-bedrock/L2/interfaces/IL1Block.sol";
 
 /// @custom:proxied true
 /// @custom:predeploy 0x4200000000000000000000000000000000000007

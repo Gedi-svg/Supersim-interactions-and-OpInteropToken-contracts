@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IGovernanceToken } from "src/governance/interfaces/IGovernanceToken.sol";
+import { IGovernanceToken } from "@contracts-bedrock/governance/interfaces/IGovernanceToken.sol";
 
 interface IMintManager {
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);

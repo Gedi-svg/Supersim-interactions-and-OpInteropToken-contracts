@@ -3,11 +3,11 @@ pragma solidity 0.8.15;
 
 // Contracts
 import { OwnableUpgradeable } from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
-import { WETH98 } from "src/universal/WETH98.sol";
+import { WETH98 } from "@contracts-bedrock/universal/WETH98.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
 
 /// @custom:proxied true
 /// @title DelayedWETH

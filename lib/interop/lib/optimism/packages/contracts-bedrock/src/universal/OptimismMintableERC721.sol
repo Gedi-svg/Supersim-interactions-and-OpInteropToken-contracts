@@ -5,8 +5,8 @@ import { ERC721Enumerable } from "@openzeppelin/contracts/token/ERC721/extension
 import { ERC721 } from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 import { Strings } from "@openzeppelin/contracts/utils/Strings.sol";
-import { IOptimismMintableERC721 } from "src/universal/interfaces/IOptimismMintableERC721.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { IOptimismMintableERC721 } from "@contracts-bedrock/universal/interfaces/IOptimismMintableERC721.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @title OptimismMintableERC721
 /// @notice This contract is the remote representation for some token that lives on another network,

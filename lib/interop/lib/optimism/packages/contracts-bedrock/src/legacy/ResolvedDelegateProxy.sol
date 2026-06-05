@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { AddressManager } from "src/legacy/AddressManager.sol";
+import { AddressManager } from "@contracts-bedrock/legacy/AddressManager.sol";
 
 /// @custom:legacy true
 /// @title ResolvedDelegateProxy

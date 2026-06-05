@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IERC721Bridge } from "src/universal/interfaces/IERC721Bridge.sol";
-import { ICrossDomainMessenger } from "src/universal/interfaces/ICrossDomainMessenger.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
+import { IERC721Bridge } from "@contracts-bedrock/universal/interfaces/IERC721Bridge.sol";
+import { ICrossDomainMessenger } from "@contracts-bedrock/universal/interfaces/ICrossDomainMessenger.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
 
 interface IL1ERC721Bridge is IERC721Bridge {
     function bridgeERC721(

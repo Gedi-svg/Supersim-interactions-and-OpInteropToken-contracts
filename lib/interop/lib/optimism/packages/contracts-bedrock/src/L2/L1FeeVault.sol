@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { FeeVault } from "src/L2/FeeVault.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { FeeVault } from "@contracts-bedrock/L2/FeeVault.sol";
 
-import { Types } from "src/libraries/Types.sol";
+import { Types } from "@contracts-bedrock/libraries/Types.sol";
 
 /// @custom:proxied true
 /// @custom:predeploy 0x420000000000000000000000000000000000001A

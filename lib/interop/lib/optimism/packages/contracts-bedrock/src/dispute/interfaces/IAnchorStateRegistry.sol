@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IFaultDisputeGame } from "src/dispute/interfaces/IFaultDisputeGame.sol";
-import { IDisputeGameFactory } from "src/dispute/interfaces/IDisputeGameFactory.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import "src/dispute/lib/Types.sol";
+import { IFaultDisputeGame } from "@contracts-bedrock/dispute/interfaces/IFaultDisputeGame.sol";
+import { IDisputeGameFactory } from "@contracts-bedrock/dispute/interfaces/IDisputeGameFactory.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import "@contracts-bedrock/dispute/lib/Types.sol";
 
 interface IAnchorStateRegistry {
     struct StartingAnchorRoot {

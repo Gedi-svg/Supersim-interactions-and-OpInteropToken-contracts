@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { MIPSMemory } from "src/cannon/libraries/MIPSMemory.sol";
-import { MIPSState as st } from "src/cannon/libraries/MIPSState.sol";
-import { IPreimageOracle } from "src/cannon/interfaces/IPreimageOracle.sol";
-import { PreimageKeyLib } from "src/cannon/PreimageKeyLib.sol";
+import { MIPSMemory } from "@contracts-bedrock/cannon/libraries/MIPSMemory.sol";
+import { MIPSState as st } from "@contracts-bedrock/cannon/libraries/MIPSState.sol";
+import { IPreimageOracle } from "@contracts-bedrock/cannon/interfaces/IPreimageOracle.sol";
+import { PreimageKeyLib } from "@contracts-bedrock/cannon/PreimageKeyLib.sol";
 
 library MIPSSyscalls {
     struct SysReadParams {

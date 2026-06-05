@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { ISystemConfig } from "src/L1/interfaces/ISystemConfig.sol";
-import { IResourceMetering } from "src/L1/interfaces/IResourceMetering.sol";
+import { ISystemConfig } from "@contracts-bedrock/L1/interfaces/ISystemConfig.sol";
+import { IResourceMetering } from "@contracts-bedrock/L1/interfaces/IResourceMetering.sol";
 
 interface ISystemConfigInterop {
     event ConfigUpdate(uint256 indexed version, ISystemConfig.UpdateType indexed updateType, bytes data);

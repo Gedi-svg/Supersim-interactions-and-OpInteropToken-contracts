@@ -2,16 +2,16 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { StandardBridge } from "src/universal/StandardBridge.sol";
-import { OptimismMintableERC20 } from "src/universal/OptimismMintableERC20.sol";
+import { StandardBridge } from "@contracts-bedrock/universal/StandardBridge.sol";
+import { OptimismMintableERC20 } from "@contracts-bedrock/universal/OptimismMintableERC20.sol";
 
 // Libraries
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { ICrossDomainMessenger } from "src/universal/interfaces/ICrossDomainMessenger.sol";
-import { IL1Block } from "src/L2/interfaces/IL1Block.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { ICrossDomainMessenger } from "@contracts-bedrock/universal/interfaces/ICrossDomainMessenger.sol";
+import { IL1Block } from "@contracts-bedrock/L2/interfaces/IL1Block.sol";
 
 /// @custom:proxied true
 /// @custom:predeploy 0x4200000000000000000000000000000000000010

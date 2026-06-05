@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IOwnable } from "src/universal/interfaces/IOwnable.sol";
+import { IOwnable } from "@contracts-bedrock/universal/interfaces/IOwnable.sol";
 
 /// @title IAddressManager
 /// @notice Interface for the AddressManager contract.

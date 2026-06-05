@@ -5,10 +5,10 @@ pragma solidity 0.8.15;
 import { Initializable } from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 
 // Libraries
-import { Types } from "src/libraries/Types.sol";
+import { Types } from "@contracts-bedrock/libraries/Types.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @custom:proxied true
 /// @title L2OutputOracle

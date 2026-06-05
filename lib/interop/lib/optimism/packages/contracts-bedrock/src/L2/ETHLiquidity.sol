@@ -2,15 +2,15 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { SafeSend } from "src/universal/SafeSend.sol";
+import { SafeSend } from "@contracts-bedrock/universal/SafeSend.sol";
 
 // Libraries
-import { Unauthorized, NotCustomGasToken } from "src/libraries/errors/CommonErrors.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { Unauthorized, NotCustomGasToken } from "@contracts-bedrock/libraries/errors/CommonErrors.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IL1Block } from "src/L2/interfaces/IL1Block.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IL1Block } from "@contracts-bedrock/L2/interfaces/IL1Block.sol";
 
 /// @title ETHLiquidity
 /// @notice The ETHLiquidity contract allows other contracts to access ETH liquidity without

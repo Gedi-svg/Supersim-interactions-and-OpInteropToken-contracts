@@ -6,7 +6,7 @@ import {console} from "lib/forge-std/src/console.sol";
 import {ISuperchainWETH} from "@contracts-bedrock/L2/interfaces/ISuperchainWETH.sol";
 import {ISuperchainTokenBridge} from "@contracts-bedrock/L2/interfaces/ISuperchainTokenBridge.sol";
 import {ISuperchainERC20} from "@contracts-bedrock/L2/interfaces/ISuperchainERC20.sol";
-import {IOpInteropToken} from "src/OpInteropToken.sol";
+import {OpInteropToken} from "@app/OpInteropToken.sol";
 
 contract Interactions is Script {
     
@@ -40,7 +40,7 @@ contract Interactions is Script {
         vm.stopBroadcast();
     }
 
-    function mintWETH() public {
+    function mintWeth() public {
         uint256 privateKey = vm.envUint("ACCOUNT1_PRIVATE_KEY"); 
         vm.startBroadcast(privateKey); 
         (bool success, ) = payable(SUPERCHAIN_WETH).call{value: 1 ether}("");
@@ -56,7 +56,7 @@ contract Interactions is Script {
         return amount;
     }
 
-    function getBalanceOfWETH() public view returns(uint256) {
+    function getBalanceOfWeth() public view returns(uint256) {
         address account = getAccountAddress();
         uint256 amount = ISuperchainWETH(SUPERCHAIN_WETH).balanceOf(account);
         console.log("Balance of WETH: ");
@@ -78,7 +78,7 @@ contract Interactions is Script {
     function mintERC20() internal {
         uint256 privateKey = vm.envUint("ACCOUNT1_PRIVATE_KEY"); 
         vm.startBroadcast(privateKey); 
-        IOpInteropToken(OP_INTEROP_TOKEN).mint(2 ether);
+        OpInteropToken(OP_INTEROP_TOKEN).mint(address(this), 2 ether);
         vm.stopBroadcast();
     }
 

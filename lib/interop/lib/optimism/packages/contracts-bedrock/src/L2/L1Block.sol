@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { Constants } from "src/libraries/Constants.sol";
-import { GasPayingToken, IGasToken } from "src/libraries/GasPayingToken.sol";
-import { NotDepositor } from "src/libraries/L1BlockErrors.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
+import { GasPayingToken, IGasToken } from "@contracts-bedrock/libraries/GasPayingToken.sol";
+import { NotDepositor } from "@contracts-bedrock/libraries/L1BlockErrors.sol";
 
 /// @custom:proxied true
 /// @custom:predeploy 0x4200000000000000000000000000000000000015

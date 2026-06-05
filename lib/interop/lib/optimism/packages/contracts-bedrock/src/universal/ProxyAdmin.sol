@@ -5,14 +5,14 @@ pragma solidity 0.8.15;
 import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 
 // Libraries
-import { Constants } from "src/libraries/Constants.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
 
 // Interfaces
-import { IAddressManager } from "src/legacy/interfaces/IAddressManager.sol";
-import { IL1ChugSplashProxy } from "src/legacy/interfaces/IL1ChugSplashProxy.sol";
-import { IStaticL1ChugSplashProxy } from "src/legacy/interfaces/IL1ChugSplashProxy.sol";
-import { IStaticERC1967Proxy } from "src/universal/interfaces/IStaticERC1967Proxy.sol";
-import { IProxy } from "src/universal/interfaces/IProxy.sol";
+import { IAddressManager } from "@contracts-bedrock/legacy/interfaces/IAddressManager.sol";
+import { IL1ChugSplashProxy } from "@contracts-bedrock/legacy/interfaces/IL1ChugSplashProxy.sol";
+import { IStaticL1ChugSplashProxy } from "@contracts-bedrock/legacy/interfaces/IL1ChugSplashProxy.sol";
+import { IStaticERC1967Proxy } from "@contracts-bedrock/universal/interfaces/IStaticERC1967Proxy.sol";
+import { IProxy } from "@contracts-bedrock/universal/interfaces/IProxy.sol";
 
 /// @title ProxyAdmin
 /// @notice This is an auxiliary contract meant to be assigned as the admin of an ERC1967 Proxy,

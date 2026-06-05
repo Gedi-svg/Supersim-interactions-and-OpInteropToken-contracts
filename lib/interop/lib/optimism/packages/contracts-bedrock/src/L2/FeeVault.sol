@@ -2,14 +2,14 @@
 pragma solidity 0.8.15;
 
 // Libraries
-import { SafeCall } from "src/libraries/SafeCall.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { SafeCall } from "@contracts-bedrock/libraries/SafeCall.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
-import { IL2ToL1MessagePasser } from "src/L2/interfaces/IL2ToL1MessagePasser.sol";
+import { IL2ToL1MessagePasser } from "@contracts-bedrock/L2/interfaces/IL2ToL1MessagePasser.sol";
 
 // Libraries
-import { Types } from "src/libraries/Types.sol";
+import { Types } from "@contracts-bedrock/libraries/Types.sol";
 
 /// @title FeeVault
 /// @notice The FeeVault contract contains the basic logic for the various different vault contracts

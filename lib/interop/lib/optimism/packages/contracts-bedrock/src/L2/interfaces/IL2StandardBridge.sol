@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IStandardBridge } from "src/universal/interfaces/IStandardBridge.sol";
+import { IStandardBridge } from "@contracts-bedrock/universal/interfaces/IStandardBridge.sol";
 
 interface IL2StandardBridge is IStandardBridge {
     event DepositFinalized(

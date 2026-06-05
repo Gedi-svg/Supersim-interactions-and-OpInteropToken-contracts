@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @title IOptimismSuperchainERC20Beacon
 /// @notice Interface for the OptimismSuperchainERC20Beacon contract

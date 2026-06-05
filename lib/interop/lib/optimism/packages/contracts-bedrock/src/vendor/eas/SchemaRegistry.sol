@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.19;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { ISchemaResolver } from "src/vendor/eas/resolver/ISchemaResolver.sol";
-import { EMPTY_UID, MAX_GAP } from "src/vendor/eas/Common.sol";
-import { ISchemaRegistry, SchemaRecord } from "src/vendor/eas/ISchemaRegistry.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { ISchemaResolver } from "@contracts-bedrock/vendor/eas/resolver/ISchemaResolver.sol";
+import { EMPTY_UID, MAX_GAP } from "@contracts-bedrock/vendor/eas/Common.sol";
+import { ISchemaRegistry, SchemaRecord } from "@contracts-bedrock/vendor/eas/ISchemaRegistry.sol";
 
 /// @custom:proxied true
 /// @custom:predeploy 0x4200000000000000000000000000000000000020

@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { AttestationStation } from "src/periphery/op-nft/AttestationStation.sol";
-import { OptimistConstants } from "src/periphery/op-nft/libraries/OptimistConstants.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { AttestationStation } from "@contracts-bedrock/periphery/op-nft/AttestationStation.sol";
+import { OptimistConstants } from "@contracts-bedrock/periphery/op-nft/libraries/OptimistConstants.sol";
 
 /// @title  OptimistAllowlist
 /// @notice Source of truth for whether an address is able to mint an Optimist NFT.

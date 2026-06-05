@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { OptimistConstants } from "src/periphery/op-nft/libraries/OptimistConstants.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { AttestationStation } from "src/periphery/op-nft/AttestationStation.sol";
+import { OptimistConstants } from "@contracts-bedrock/periphery/op-nft/libraries/OptimistConstants.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { AttestationStation } from "@contracts-bedrock/periphery/op-nft/AttestationStation.sol";
 import { SignatureChecker } from "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
 import { EIP712Upgradeable } from "@openzeppelin/contracts-upgradeable/utils/cryptography/draft-EIP712Upgradeable.sol";
 

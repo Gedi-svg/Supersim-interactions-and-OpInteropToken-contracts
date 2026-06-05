@@ -5,16 +5,16 @@ pragma solidity 0.8.15;
 import { Initializable } from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 
 // Libraries
-import { GameType, OutputRoot, Claim, GameStatus, Hash } from "src/dispute/lib/Types.sol";
-import { Unauthorized } from "src/libraries/errors/CommonErrors.sol";
-import { UnregisteredGame, InvalidGameStatus } from "src/dispute/lib/Errors.sol";
+import { GameType, OutputRoot, Claim, GameStatus, Hash } from "@contracts-bedrock/dispute/lib/Types.sol";
+import { Unauthorized } from "@contracts-bedrock/libraries/errors/CommonErrors.sol";
+import { UnregisteredGame, InvalidGameStatus } from "@contracts-bedrock/dispute/lib/Errors.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IFaultDisputeGame } from "src/dispute/interfaces/IFaultDisputeGame.sol";
-import { IDisputeGame } from "src/dispute/interfaces/IDisputeGame.sol";
-import { IDisputeGameFactory } from "src/dispute/interfaces/IDisputeGameFactory.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IFaultDisputeGame } from "@contracts-bedrock/dispute/interfaces/IFaultDisputeGame.sol";
+import { IDisputeGame } from "@contracts-bedrock/dispute/interfaces/IDisputeGame.sol";
+import { IDisputeGameFactory } from "@contracts-bedrock/dispute/interfaces/IDisputeGameFactory.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
 
 /// @custom:proxied true
 /// @title AnchorStateRegistry

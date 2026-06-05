@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IAddressManager } from "src/legacy/interfaces/IAddressManager.sol";
+import { IAddressManager } from "@contracts-bedrock/legacy/interfaces/IAddressManager.sol";
 
 interface IProxyAdmin {
     enum ProxyType {

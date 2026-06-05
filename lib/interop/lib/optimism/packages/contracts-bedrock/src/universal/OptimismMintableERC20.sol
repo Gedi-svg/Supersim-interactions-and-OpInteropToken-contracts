@@ -4,9 +4,9 @@ pragma solidity 0.8.15;
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import { ERC20Permit } from "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
-import { ILegacyMintableERC20, IOptimismMintableERC20 } from "src/universal/interfaces/IOptimismMintableERC20.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { Preinstalls } from "src/libraries/Preinstalls.sol";
+import { ILegacyMintableERC20, IOptimismMintableERC20 } from "@contracts-bedrock/universal/interfaces/IOptimismMintableERC20.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { Preinstalls } from "@contracts-bedrock/libraries/Preinstalls.sol";
 
 /// @title OptimismMintableERC20
 /// @notice OptimismMintableERC20 is a standard extension of the base ERC20 token contract designed

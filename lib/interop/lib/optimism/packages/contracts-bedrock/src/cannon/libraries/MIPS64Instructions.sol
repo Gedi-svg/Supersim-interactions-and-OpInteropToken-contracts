@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { MIPS64Memory } from "src/cannon/libraries/MIPS64Memory.sol";
-import { MIPS64State as st } from "src/cannon/libraries/MIPS64State.sol";
-import { MIPS64Arch as arch } from "src/cannon/libraries/MIPS64Arch.sol";
+import { MIPS64Memory } from "@contracts-bedrock/cannon/libraries/MIPS64Memory.sol";
+import { MIPS64State as st } from "@contracts-bedrock/cannon/libraries/MIPS64State.sol";
+import { MIPS64Arch as arch } from "@contracts-bedrock/cannon/libraries/MIPS64Arch.sol";
 
 library MIPS64Instructions {
     uint32 internal constant OP_LOAD_LINKED = 0x30;

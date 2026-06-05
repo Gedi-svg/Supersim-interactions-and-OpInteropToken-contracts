@@ -3,7 +3,7 @@ pragma solidity 0.8.15;
 
 // Libraries
 import { LibKeccak } from "@lib-keccak/LibKeccak.sol";
-import { PreimageKeyLib } from "src/cannon/PreimageKeyLib.sol";
+import { PreimageKeyLib } from "@contracts-bedrock/cannon/PreimageKeyLib.sol";
 import {
     PartOffsetOOB,
     NotEnoughGas,
@@ -22,11 +22,11 @@ import {
     NotEOA,
     InsufficientBond,
     BondTransferFailed
-} from "src/cannon/libraries/CannonErrors.sol";
-import { LPPMetaData } from "src/cannon/libraries/CannonTypes.sol";
+} from "@contracts-bedrock/cannon/libraries/CannonErrors.sol";
+import { LPPMetaData } from "@contracts-bedrock/cannon/libraries/CannonTypes.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @title PreimageOracle
 /// @notice A contract for storing permissioned pre-images.

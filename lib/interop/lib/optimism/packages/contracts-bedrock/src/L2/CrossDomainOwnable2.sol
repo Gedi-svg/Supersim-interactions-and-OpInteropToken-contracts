@@ -5,10 +5,10 @@ pragma solidity ^0.8.0;
 import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 
 // Libraries
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
-import { IL2CrossDomainMessenger } from "src/L2/interfaces/IL2CrossDomainMessenger.sol";
+import { IL2CrossDomainMessenger } from "@contracts-bedrock/L2/interfaces/IL2CrossDomainMessenger.sol";
 
 /// @title CrossDomainOwnable2
 /// @notice This contract extends the OpenZeppelin `Ownable` contract for L2 contracts to be owned

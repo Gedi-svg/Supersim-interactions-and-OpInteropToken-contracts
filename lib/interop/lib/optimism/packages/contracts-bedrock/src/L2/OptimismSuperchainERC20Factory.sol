@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { OptimismSuperchainERC20 } from "src/L2/OptimismSuperchainERC20.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { OptimismSuperchainERC20 } from "@contracts-bedrock/L2/OptimismSuperchainERC20.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 import { BeaconProxy } from "@openzeppelin/contracts-v5/proxy/beacon/BeaconProxy.sol";
 import { CREATE3 } from "@rari-capital/solmate/src/utils/CREATE3.sol";
 

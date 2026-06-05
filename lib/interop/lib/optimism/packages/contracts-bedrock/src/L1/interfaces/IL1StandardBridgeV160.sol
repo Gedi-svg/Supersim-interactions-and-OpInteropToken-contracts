@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IStandardBridge } from "src/universal/interfaces/IStandardBridge.sol";
-import { ICrossDomainMessenger } from "src/universal/interfaces/ICrossDomainMessenger.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import { ISystemConfig } from "src/L1/interfaces/ISystemConfig.sol";
+import { IStandardBridge } from "@contracts-bedrock/universal/interfaces/IStandardBridge.sol";
+import { ICrossDomainMessenger } from "@contracts-bedrock/universal/interfaces/ICrossDomainMessenger.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import { ISystemConfig } from "@contracts-bedrock/L1/interfaces/ISystemConfig.sol";
 
 /// @notice This interface corresponds to the op-contracts/v1.6.0 release of the L1StandardBridge
 /// contract, which has a semver of 2.1.0 as specified in

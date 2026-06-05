@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 import { IPreimageOracle } from "./interfaces/IPreimageOracle.sol";
-import { MIPSInstructions as ins } from "src/cannon/libraries/MIPSInstructions.sol";
-import { MIPSSyscalls as sys } from "src/cannon/libraries/MIPSSyscalls.sol";
-import { MIPSState as st } from "src/cannon/libraries/MIPSState.sol";
-import { MIPSMemory } from "src/cannon/libraries/MIPSMemory.sol";
-import { InvalidRMWInstruction } from "src/cannon/libraries/CannonErrors.sol";
+import { MIPSInstructions as ins } from "@contracts-bedrock/cannon/libraries/MIPSInstructions.sol";
+import { MIPSSyscalls as sys } from "@contracts-bedrock/cannon/libraries/MIPSSyscalls.sol";
+import { MIPSState as st } from "@contracts-bedrock/cannon/libraries/MIPSState.sol";
+import { MIPSMemory } from "@contracts-bedrock/cannon/libraries/MIPSMemory.sol";
+import { InvalidRMWInstruction } from "@contracts-bedrock/cannon/libraries/CannonErrors.sol";
 
 /// @title MIPS
 /// @notice The MIPS contract emulates a single MIPS instruction.

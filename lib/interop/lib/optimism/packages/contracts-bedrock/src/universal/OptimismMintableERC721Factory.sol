@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { OptimismMintableERC721 } from "src/universal/OptimismMintableERC721.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { OptimismMintableERC721 } from "@contracts-bedrock/universal/OptimismMintableERC721.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @title OptimismMintableERC721Factory
 /// @notice Factory contract for creating OptimismMintableERC721 contracts.

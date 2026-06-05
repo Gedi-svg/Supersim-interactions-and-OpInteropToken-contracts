@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { Types } from "src/libraries/Types.sol";
-import { ISystemConfig } from "src/L1/interfaces/ISystemConfig.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import { IL2OutputOracle } from "src/L1/interfaces/IL2OutputOracle.sol";
+import { Types } from "@contracts-bedrock/libraries/Types.sol";
+import { ISystemConfig } from "@contracts-bedrock/L1/interfaces/ISystemConfig.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import { IL2OutputOracle } from "@contracts-bedrock/L1/interfaces/IL2OutputOracle.sol";
 
 interface IOptimismPortal {
     error BadTarget();

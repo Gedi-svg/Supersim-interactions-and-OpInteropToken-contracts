@@ -3,17 +3,17 @@ pragma solidity 0.8.15;
 
 // Contracts
 import { Initializable } from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
-import { ResourceMetering } from "src/L1/ResourceMetering.sol";
+import { ResourceMetering } from "@contracts-bedrock/L1/ResourceMetering.sol";
 
 // Libraries
 import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import { SafeCall } from "src/libraries/SafeCall.sol";
-import { Constants } from "src/libraries/Constants.sol";
-import { Types } from "src/libraries/Types.sol";
-import { Hashing } from "src/libraries/Hashing.sol";
-import { SecureMerkleTrie } from "src/libraries/trie/SecureMerkleTrie.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
-import { AddressAliasHelper } from "src/vendor/AddressAliasHelper.sol";
+import { SafeCall } from "@contracts-bedrock/libraries/SafeCall.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
+import { Types } from "@contracts-bedrock/libraries/Types.sol";
+import { Hashing } from "@contracts-bedrock/libraries/Hashing.sol";
+import { SecureMerkleTrie } from "@contracts-bedrock/libraries/trie/SecureMerkleTrie.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
+import { AddressAliasHelper } from "@contracts-bedrock/vendor/AddressAliasHelper.sol";
 import {
     BadTarget,
     LargeCalldata,
@@ -26,16 +26,16 @@ import {
     GasEstimation,
     NonReentrant,
     Unproven
-} from "src/libraries/PortalErrors.sol";
+} from "@contracts-bedrock/libraries/PortalErrors.sol";
 
 // Interfaces
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IL2OutputOracle } from "src/L1/interfaces/IL2OutputOracle.sol";
-import { ISystemConfig } from "src/L1/interfaces/ISystemConfig.sol";
-import { IResourceMetering } from "src/L1/interfaces/IResourceMetering.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import { IL1Block } from "src/L2/interfaces/IL1Block.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IL2OutputOracle } from "@contracts-bedrock/L1/interfaces/IL2OutputOracle.sol";
+import { ISystemConfig } from "@contracts-bedrock/L1/interfaces/ISystemConfig.sol";
+import { IResourceMetering } from "@contracts-bedrock/L1/interfaces/IResourceMetering.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import { IL1Block } from "@contracts-bedrock/L2/interfaces/IL1Block.sol";
 
 /// @custom:proxied true
 /// @title OptimismPortal

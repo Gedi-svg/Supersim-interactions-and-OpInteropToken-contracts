@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { MIPSMemory } from "src/cannon/libraries/MIPSMemory.sol";
-import { MIPSState as st } from "src/cannon/libraries/MIPSState.sol";
+import { MIPSMemory } from "@contracts-bedrock/cannon/libraries/MIPSMemory.sol";
+import { MIPSState as st } from "@contracts-bedrock/cannon/libraries/MIPSState.sol";
 
 library MIPSInstructions {
     uint32 internal constant OP_LOAD_LINKED = 0x30;

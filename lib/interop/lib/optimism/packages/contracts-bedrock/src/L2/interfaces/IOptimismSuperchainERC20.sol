@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 // Interfaces
-import { ISuperchainERC20 } from "src/L2/interfaces/ISuperchainERC20.sol";
+import { ISuperchainERC20 } from "@contracts-bedrock/L2/interfaces/ISuperchainERC20.sol";
 
 /// @title IOptimismSuperchainERC20
 /// @notice This interface is available on the OptimismSuperchainERC20 contract.

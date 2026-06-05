@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IWETH } from "src/universal/interfaces/IWETH.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
+import { IWETH } from "@contracts-bedrock/universal/interfaces/IWETH.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
 
 interface IDelayedWETH is IWETH {
     struct WithdrawalRequest {

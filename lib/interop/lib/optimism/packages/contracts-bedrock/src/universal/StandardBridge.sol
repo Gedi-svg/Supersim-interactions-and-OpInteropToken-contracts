@@ -5,12 +5,12 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import { ERC165Checker } from "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol";
 import { Address } from "@openzeppelin/contracts/utils/Address.sol";
 import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
-import { SafeCall } from "src/libraries/SafeCall.sol";
-import { IOptimismMintableERC20, ILegacyMintableERC20 } from "src/universal/interfaces/IOptimismMintableERC20.sol";
-import { ICrossDomainMessenger } from "src/universal/interfaces/ICrossDomainMessenger.sol";
-import { OptimismMintableERC20 } from "src/universal/OptimismMintableERC20.sol";
+import { SafeCall } from "@contracts-bedrock/libraries/SafeCall.sol";
+import { IOptimismMintableERC20, ILegacyMintableERC20 } from "@contracts-bedrock/universal/interfaces/IOptimismMintableERC20.sol";
+import { ICrossDomainMessenger } from "@contracts-bedrock/universal/interfaces/ICrossDomainMessenger.sol";
+import { OptimismMintableERC20 } from "@contracts-bedrock/universal/OptimismMintableERC20.sol";
 import { Initializable } from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
-import { Constants } from "src/libraries/Constants.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
 
 /// @custom:upgradeable
 /// @title StandardBridge

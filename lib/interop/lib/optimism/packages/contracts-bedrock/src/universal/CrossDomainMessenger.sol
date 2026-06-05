@@ -2,10 +2,10 @@
 pragma solidity 0.8.15;
 
 import { Initializable } from "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import { SafeCall } from "src/libraries/SafeCall.sol";
-import { Hashing } from "src/libraries/Hashing.sol";
-import { Encoding } from "src/libraries/Encoding.sol";
-import { Constants } from "src/libraries/Constants.sol";
+import { SafeCall } from "@contracts-bedrock/libraries/SafeCall.sol";
+import { Hashing } from "@contracts-bedrock/libraries/Hashing.sol";
+import { Encoding } from "@contracts-bedrock/libraries/Encoding.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
 
 /// @custom:legacy
 /// @title CrossDomainMessengerLegacySpacer0

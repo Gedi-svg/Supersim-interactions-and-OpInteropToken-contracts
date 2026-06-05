@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 import { ERC721BurnableUpgradeable } from
     "@openzeppelin/contracts-upgradeable/token/ERC721/extensions/ERC721BurnableUpgradeable.sol";
-import { AttestationStation } from "src/periphery/op-nft/AttestationStation.sol";
-import { OptimistAllowlist } from "src/periphery/op-nft/OptimistAllowlist.sol";
+import { AttestationStation } from "@contracts-bedrock/periphery/op-nft/AttestationStation.sol";
+import { OptimistAllowlist } from "@contracts-bedrock/periphery/op-nft/OptimistAllowlist.sol";
 import { Strings } from "@openzeppelin/contracts/utils/Strings.sol";
 
 /// @author Optimism Collective

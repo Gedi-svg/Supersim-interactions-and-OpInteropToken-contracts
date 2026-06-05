@@ -2,13 +2,13 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { OptimismPortal2 } from "src/L1/OptimismPortal2.sol";
-import { L1BlockInterop, ConfigType } from "src/L2/L1BlockInterop.sol";
+import { OptimismPortal2 } from "@contracts-bedrock/L1/OptimismPortal2.sol";
+import { L1BlockInterop, ConfigType } from "@contracts-bedrock/L2/L1BlockInterop.sol";
 
 // Libraries
-import { Predeploys } from "src/libraries/Predeploys.sol";
-import { Constants } from "src/libraries/Constants.sol";
-import { Unauthorized } from "src/libraries/PortalErrors.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
+import { Unauthorized } from "@contracts-bedrock/libraries/PortalErrors.sol";
 
 /// @custom:proxied true
 /// @title OptimismPortalInterop

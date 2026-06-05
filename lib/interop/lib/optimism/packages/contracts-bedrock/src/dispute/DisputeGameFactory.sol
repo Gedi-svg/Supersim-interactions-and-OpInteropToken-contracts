@@ -6,12 +6,12 @@ import { OwnableUpgradeable } from "@openzeppelin/contracts-upgradeable/access/O
 
 // Libraries
 import { LibClone } from "@solady/utils/LibClone.sol";
-import { GameType, Claim, GameId, Timestamp, Hash, LibGameId } from "src/dispute/lib/Types.sol";
-import { NoImplementation, IncorrectBondAmount, GameAlreadyExists } from "src/dispute/lib/Errors.sol";
+import { GameType, Claim, GameId, Timestamp, Hash, LibGameId } from "@contracts-bedrock/dispute/lib/Types.sol";
+import { NoImplementation, IncorrectBondAmount, GameAlreadyExists } from "@contracts-bedrock/dispute/lib/Errors.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IDisputeGame } from "src/dispute/interfaces/IDisputeGame.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IDisputeGame } from "@contracts-bedrock/dispute/interfaces/IDisputeGame.sol";
 
 /// @custom:proxied true
 /// @title DisputeGameFactory

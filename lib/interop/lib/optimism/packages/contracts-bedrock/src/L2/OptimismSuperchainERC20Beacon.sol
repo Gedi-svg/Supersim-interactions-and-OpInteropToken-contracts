@@ -2,8 +2,8 @@
 pragma solidity 0.8.15;
 
 import { IBeacon } from "@openzeppelin/contracts/proxy/beacon/IBeacon.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 /// @custom:proxied true
 /// @custom:predeployed 0x4200000000000000000000000000000000000027

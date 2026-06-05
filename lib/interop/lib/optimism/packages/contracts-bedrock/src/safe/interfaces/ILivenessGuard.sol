@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import { GnosisSafe as Safe } from "safe-contracts/GnosisSafe.sol";
 import { Enum } from "safe-contracts/common/Enum.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 interface ILivenessGuard is ISemver {
     event OwnerRecorded(address owner);

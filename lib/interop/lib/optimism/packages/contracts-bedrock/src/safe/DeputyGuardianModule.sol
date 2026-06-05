@@ -6,16 +6,16 @@ import { GnosisSafe as Safe } from "safe-contracts/GnosisSafe.sol";
 import { Enum } from "safe-contracts/common/Enum.sol";
 
 // Libraries
-import { Unauthorized } from "src/libraries/PortalErrors.sol";
-import "src/dispute/lib/Types.sol";
+import { Unauthorized } from "@contracts-bedrock/libraries/PortalErrors.sol";
+import "@contracts-bedrock/dispute/lib/Types.sol";
 
 // Interfaces
-import { IAnchorStateRegistry } from "src/dispute/interfaces/IAnchorStateRegistry.sol";
-import { IFaultDisputeGame } from "src/dispute/interfaces/IFaultDisputeGame.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import { IOptimismPortal2 } from "src/L1/interfaces/IOptimismPortal2.sol";
-import { IDisputeGame } from "src/dispute/interfaces/IDisputeGame.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { IAnchorStateRegistry } from "@contracts-bedrock/dispute/interfaces/IAnchorStateRegistry.sol";
+import { IFaultDisputeGame } from "@contracts-bedrock/dispute/interfaces/IFaultDisputeGame.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import { IOptimismPortal2 } from "@contracts-bedrock/L1/interfaces/IOptimismPortal2.sol";
+import { IDisputeGame } from "@contracts-bedrock/dispute/interfaces/IDisputeGame.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @title DeputyGuardianModule
 /// @notice This module is intended to be enabled on the Security Council Safe, which will own the Guardian role in the

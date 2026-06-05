@@ -2,13 +2,13 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { L1Block } from "src/L2/L1Block.sol";
+import { L1Block } from "@contracts-bedrock/L2/L1Block.sol";
 
 // Libraries
 import { EnumerableSet } from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
-import { GasPayingToken } from "src/libraries/GasPayingToken.sol";
-import { StaticConfig } from "src/libraries/StaticConfig.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { GasPayingToken } from "@contracts-bedrock/libraries/GasPayingToken.sol";
+import { StaticConfig } from "@contracts-bedrock/libraries/StaticConfig.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 import {
     NotDepositor,
     NotCrossL2Inbox,
@@ -16,7 +16,7 @@ import {
     DependencySetSizeTooLarge,
     AlreadyDependency,
     CantRemovedDependency
-} from "src/libraries/L1BlockErrors.sol";
+} from "@contracts-bedrock/libraries/L1BlockErrors.sol";
 
 /// @notice Enum representing different types of configurations that can be set on L1BlockInterop.
 /// @custom:value SET_GAS_PAYING_TOKEN  Represents the config type for setting the gas paying token.

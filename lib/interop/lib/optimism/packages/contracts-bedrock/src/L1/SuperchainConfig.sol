@@ -2,8 +2,8 @@
 pragma solidity 0.8.15;
 
 import { Initializable } from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { Storage } from "src/libraries/Storage.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { Storage } from "@contracts-bedrock/libraries/Storage.sol";
 
 /// @custom:proxied true
 /// @custom:audit none This contracts is not yet audited.

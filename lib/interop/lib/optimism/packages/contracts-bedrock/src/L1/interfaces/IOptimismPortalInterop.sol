@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { Types } from "src/libraries/Types.sol";
-import { GameType, Timestamp } from "src/dispute/lib/LibUDT.sol";
-import { IDisputeGame } from "src/dispute/interfaces/IDisputeGame.sol";
-import { IDisputeGameFactory } from "src/dispute/interfaces/IDisputeGameFactory.sol";
-import { ISystemConfig } from "src/L1/interfaces/ISystemConfig.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import { ConfigType } from "src/L2/L1BlockInterop.sol";
+import { Types } from "@contracts-bedrock/libraries/Types.sol";
+import { GameType, Timestamp } from "@contracts-bedrock/dispute/lib/LibUDT.sol";
+import { IDisputeGame } from "@contracts-bedrock/dispute/interfaces/IDisputeGame.sol";
+import { IDisputeGameFactory } from "@contracts-bedrock/dispute/interfaces/IDisputeGameFactory.sol";
+import { ISystemConfig } from "@contracts-bedrock/L1/interfaces/ISystemConfig.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import { ConfigType } from "@contracts-bedrock/L2/L1BlockInterop.sol";
 
 interface IOptimismPortalInterop {
     error AlreadyFinalized();

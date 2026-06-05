@@ -5,10 +5,10 @@ pragma solidity 0.8.15;
 import { OwnableUpgradeable } from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 
 // Libraries
-import { SafeCall } from "src/libraries/SafeCall.sol";
+import { SafeCall } from "@contracts-bedrock/libraries/SafeCall.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @dev An enum representing the status of a DA challenge.
 enum ChallengeStatus {

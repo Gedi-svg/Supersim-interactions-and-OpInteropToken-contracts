@@ -6,14 +6,14 @@ import { OwnableUpgradeable } from "@openzeppelin/contracts-upgradeable/access/O
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 // Libraries
-import { Storage } from "src/libraries/Storage.sol";
-import { Constants } from "src/libraries/Constants.sol";
-import { GasPayingToken, IGasToken } from "src/libraries/GasPayingToken.sol";
+import { Storage } from "@contracts-bedrock/libraries/Storage.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
+import { GasPayingToken, IGasToken } from "@contracts-bedrock/libraries/GasPayingToken.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IOptimismPortal } from "src/L1/interfaces/IOptimismPortal.sol";
-import { IResourceMetering } from "src/L1/interfaces/IResourceMetering.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IOptimismPortal } from "@contracts-bedrock/L1/interfaces/IOptimismPortal.sol";
+import { IResourceMetering } from "@contracts-bedrock/L1/interfaces/IResourceMetering.sol";
 
 /// @custom:proxied true
 /// @title SystemConfig

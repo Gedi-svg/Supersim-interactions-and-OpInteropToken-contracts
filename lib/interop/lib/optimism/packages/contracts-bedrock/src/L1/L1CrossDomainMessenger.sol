@@ -2,16 +2,16 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { CrossDomainMessenger } from "src/universal/CrossDomainMessenger.sol";
+import { CrossDomainMessenger } from "@contracts-bedrock/universal/CrossDomainMessenger.sol";
 
 // Libraries
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import { ISystemConfig } from "src/L1/interfaces/ISystemConfig.sol";
-import { IOptimismPortal } from "src/L1/interfaces/IOptimismPortal.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import { ISystemConfig } from "@contracts-bedrock/L1/interfaces/ISystemConfig.sol";
+import { IOptimismPortal } from "@contracts-bedrock/L1/interfaces/IOptimismPortal.sol";
 
 /// @custom:proxied true
 /// @title L1CrossDomainMessenger

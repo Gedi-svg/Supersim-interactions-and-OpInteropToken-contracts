@@ -2,8 +2,8 @@
 pragma solidity ^0.8.0;
 
 import { GnosisSafe as Safe } from "safe-contracts/GnosisSafe.sol";
-import { LivenessGuard } from "src/safe/LivenessGuard.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { LivenessGuard } from "@contracts-bedrock/safe/LivenessGuard.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 interface ILivenessModule is ISemver {
     error OwnerRemovalFailed(string);

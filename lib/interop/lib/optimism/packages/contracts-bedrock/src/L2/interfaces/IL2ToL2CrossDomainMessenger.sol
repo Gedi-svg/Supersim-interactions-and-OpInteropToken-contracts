@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { ICrossL2Inbox } from "src/L2/interfaces/ICrossL2Inbox.sol";
+import { ICrossL2Inbox } from "./ICrossL2Inbox.sol";
 
 /// @title IL2ToL2CrossDomainMessenger
 /// @notice Interface for the L2ToL2CrossDomainMessenger contract.

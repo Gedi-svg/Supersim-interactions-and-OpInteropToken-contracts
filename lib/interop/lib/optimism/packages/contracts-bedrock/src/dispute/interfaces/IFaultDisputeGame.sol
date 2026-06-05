@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IDisputeGame } from "src/dispute/interfaces/IDisputeGame.sol";
-import { IDelayedWETH } from "src/dispute/interfaces/IDelayedWETH.sol";
-import { IAnchorStateRegistry } from "src/dispute/interfaces/IAnchorStateRegistry.sol";
-import { IBigStepper } from "src/dispute/interfaces/IBigStepper.sol";
-import { Types } from "src/libraries/Types.sol";
-import "src/dispute/lib/Types.sol";
+import { IDisputeGame } from "@contracts-bedrock/dispute/interfaces/IDisputeGame.sol";
+import { IDelayedWETH } from "@contracts-bedrock/dispute/interfaces/IDelayedWETH.sol";
+import { IAnchorStateRegistry } from "@contracts-bedrock/dispute/interfaces/IAnchorStateRegistry.sol";
+import { IBigStepper } from "@contracts-bedrock/dispute/interfaces/IBigStepper.sol";
+import { Types } from "@contracts-bedrock/libraries/Types.sol";
+import "@contracts-bedrock/dispute/lib/Types.sol";
 
 interface IFaultDisputeGame is IDisputeGame {
     struct ClaimData {

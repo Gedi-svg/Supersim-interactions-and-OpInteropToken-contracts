@@ -2,17 +2,17 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { ERC721Bridge } from "src/universal/ERC721Bridge.sol";
+import { ERC721Bridge } from "@contracts-bedrock/universal/ERC721Bridge.sol";
 
 // Libraries
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
 import { IERC721 } from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { ICrossDomainMessenger } from "src/universal/interfaces/ICrossDomainMessenger.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import { IL2ERC721Bridge } from "src/L2/interfaces/IL2ERC721Bridge.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { ICrossDomainMessenger } from "@contracts-bedrock/universal/interfaces/ICrossDomainMessenger.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import { IL2ERC721Bridge } from "@contracts-bedrock/L2/interfaces/IL2ERC721Bridge.sol";
 
 /// @custom:proxied true
 /// @title L1ERC721Bridge

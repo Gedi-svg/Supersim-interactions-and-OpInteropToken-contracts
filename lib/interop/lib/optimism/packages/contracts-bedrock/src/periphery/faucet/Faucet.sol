@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { IFaucetAuthModule } from "src/periphery/faucet/authmodules/IFaucetAuthModule.sol";
-import { SafeCall } from "src/libraries/SafeCall.sol";
-import { SafeSend } from "src/universal/SafeSend.sol";
+import { IFaucetAuthModule } from "@contracts-bedrock/periphery/faucet/authmodules/IFaucetAuthModule.sol";
+import { SafeCall } from "@contracts-bedrock/libraries/SafeCall.sol";
+import { SafeSend } from "@contracts-bedrock/universal/SafeSend.sol";
 
 /// @title  Faucet
 /// @notice Faucet contract that drips ETH to users.

@@ -2,16 +2,16 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { FaultDisputeGame } from "src/dispute/FaultDisputeGame.sol";
+import { FaultDisputeGame } from "@contracts-bedrock/dispute/FaultDisputeGame.sol";
 
 // Libraries
-import { GameType, Claim, Duration } from "src/dispute/lib/Types.sol";
-import { BadAuth } from "src/dispute/lib/Errors.sol";
+import { GameType, Claim, Duration } from "@contracts-bedrock/dispute/lib/Types.sol";
+import { BadAuth } from "@contracts-bedrock/dispute/lib/Errors.sol";
 
 // Interfaces
-import { IDelayedWETH } from "src/dispute/interfaces/IDelayedWETH.sol";
-import { IAnchorStateRegistry } from "src/dispute/interfaces/IAnchorStateRegistry.sol";
-import { IBigStepper } from "src/dispute/interfaces/IBigStepper.sol";
+import { IDelayedWETH } from "@contracts-bedrock/dispute/interfaces/IDelayedWETH.sol";
+import { IAnchorStateRegistry } from "@contracts-bedrock/dispute/interfaces/IAnchorStateRegistry.sol";
+import { IBigStepper } from "@contracts-bedrock/dispute/interfaces/IBigStepper.sol";
 
 /// @title PermissionedDisputeGame
 /// @notice PermissionedDisputeGame is a contract that inherits from `FaultDisputeGame`, and contains two roles:

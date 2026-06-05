@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { Storage } from "src/libraries/Storage.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { Storage } from "@contracts-bedrock/libraries/Storage.sol";
 
 /// @title StorageSetter
 /// @notice A simple contract that allows setting arbitrary storage slots.

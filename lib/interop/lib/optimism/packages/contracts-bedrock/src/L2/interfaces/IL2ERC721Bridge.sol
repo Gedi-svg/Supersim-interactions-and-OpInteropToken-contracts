@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import { IERC721Bridge } from "src/universal/interfaces/IERC721Bridge.sol";
+import { IERC721Bridge } from "@contracts-bedrock/universal/interfaces/IERC721Bridge.sol";
 
 interface IL2ERC721Bridge is IERC721Bridge {
     function finalizeBridgeERC721(

@@ -3,18 +3,18 @@ pragma solidity 0.8.15;
 
 // Contracts
 import { ERC20 } from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import { IOptimismPortalInterop as IOptimismPortal } from "src/L1/interfaces/IOptimismPortalInterop.sol";
-import { SystemConfig } from "src/L1/SystemConfig.sol";
-import { ConfigType } from "src/L2/L1BlockInterop.sol";
+import { IOptimismPortalInterop as IOptimismPortal } from "@contracts-bedrock/L1/interfaces/IOptimismPortalInterop.sol";
+import { SystemConfig } from "@contracts-bedrock/L1/SystemConfig.sol";
+import { ConfigType } from "@contracts-bedrock/L2/L1BlockInterop.sol";
 
 // Libraries
-import { Constants } from "src/libraries/Constants.sol";
-import { GasPayingToken } from "src/libraries/GasPayingToken.sol";
-import { StaticConfig } from "src/libraries/StaticConfig.sol";
-import { Storage } from "src/libraries/Storage.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
+import { GasPayingToken } from "@contracts-bedrock/libraries/GasPayingToken.sol";
+import { StaticConfig } from "@contracts-bedrock/libraries/StaticConfig.sol";
+import { Storage } from "@contracts-bedrock/libraries/Storage.sol";
 
 // Interfaces
-import { IResourceMetering } from "src/L1/interfaces/IResourceMetering.sol";
+import { IResourceMetering } from "@contracts-bedrock/L1/interfaces/IResourceMetering.sol";
 
 /// @custom:proxied true
 /// @title SystemConfigInterop

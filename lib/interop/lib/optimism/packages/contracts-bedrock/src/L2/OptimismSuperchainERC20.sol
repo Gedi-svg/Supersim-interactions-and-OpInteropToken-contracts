@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
-import { IOptimismSuperchainERC20 } from "src/L2/interfaces/IOptimismSuperchainERC20.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { IOptimismSuperchainERC20 } from "@contracts-bedrock/L2/interfaces/IOptimismSuperchainERC20.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 import { ERC165 } from "@openzeppelin/contracts-v5/utils/introspection/ERC165.sol";
-import { SuperchainERC20 } from "src/L2/SuperchainERC20.sol";
+import { SuperchainERC20 } from "@contracts-bedrock/L2/SuperchainERC20.sol";
 import { Initializable } from "@openzeppelin/contracts-v5/proxy/utils/Initializable.sol";
-import { ZeroAddress, Unauthorized } from "src/libraries/errors/CommonErrors.sol";
+import { ZeroAddress, Unauthorized } from "@contracts-bedrock/libraries/errors/CommonErrors.sol";
 
 /// @custom:proxied true
 /// @title OptimismSuperchainERC20

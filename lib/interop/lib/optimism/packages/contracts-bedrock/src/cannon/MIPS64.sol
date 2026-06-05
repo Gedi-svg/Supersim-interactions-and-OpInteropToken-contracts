@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 import { IPreimageOracle } from "./interfaces/IPreimageOracle.sol";
-import { MIPS64Memory } from "src/cannon/libraries/MIPS64Memory.sol";
-import { MIPS64Syscalls as sys } from "src/cannon/libraries/MIPS64Syscalls.sol";
-import { MIPS64State as st } from "src/cannon/libraries/MIPS64State.sol";
-import { MIPS64Instructions as ins } from "src/cannon/libraries/MIPS64Instructions.sol";
-import { MIPS64Arch as arch } from "src/cannon/libraries/MIPS64Arch.sol";
-import { VMStatuses } from "src/dispute/lib/Types.sol";
+import { MIPS64Memory } from "@contracts-bedrock/cannon/libraries/MIPS64Memory.sol";
+import { MIPS64Syscalls as sys } from "@contracts-bedrock/cannon/libraries/MIPS64Syscalls.sol";
+import { MIPS64State as st } from "@contracts-bedrock/cannon/libraries/MIPS64State.sol";
+import { MIPS64Instructions as ins } from "@contracts-bedrock/cannon/libraries/MIPS64Instructions.sol";
+import { MIPS64Arch as arch } from "@contracts-bedrock/cannon/libraries/MIPS64Arch.sol";
+import { VMStatuses } from "@contracts-bedrock/dispute/lib/Types.sol";
 import {
     InvalidMemoryProof, InvalidRMWInstruction, InvalidSecondMemoryProof
-} from "src/cannon/libraries/CannonErrors.sol";
+} from "@contracts-bedrock/cannon/libraries/CannonErrors.sol";
 
 /// @title MIPS64
 /// @notice The MIPS64 contract emulates a single MIPS instruction.

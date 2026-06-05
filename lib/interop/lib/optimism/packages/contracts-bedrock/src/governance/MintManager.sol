@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.15;
+pragma solidity 0.8.25;
 
 // Contracts
 import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
 
 // Interfaces
-import { IGovernanceToken } from "src/governance/interfaces/IGovernanceToken.sol";
+import { IGovernanceToken } from "@contracts-bedrock/governance/interfaces/IGovernanceToken.sol";
 
 /// @title MintManager
 /// @notice Set as `owner` of the governance token and responsible for the token inflation

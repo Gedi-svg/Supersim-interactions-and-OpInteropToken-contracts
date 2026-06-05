@@ -2,12 +2,16 @@
 pragma solidity 0.8.25;
 
 // Libraries
-import { Predeploys } from "src/libraries/Predeploys.sol";
-import { ZeroAddress, Unauthorized } from "src/libraries/errors/CommonErrors.sol";
-
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
+import { ZeroAddress, Unauthorized } from "@contracts-bedrock/libraries/errors/CommonErrors.sol";
+import { Initializable } from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
+import { L2ToL2CrossDomainMessenger } from "@contracts-bedrock/L2/L2ToL2CrossDomainMessenger.sol";
 // Interfaces
-import { ISuperchainERC20 } from "src/L2/interfaces/ISuperchainERC20.sol";
-import { IL2ToL2CrossDomainMessenger } from "src/L2/interfaces/IL2ToL2CrossDomainMessenger.sol";
+import { ISuperchainERC20 } from "@contracts-bedrock/L2/interfaces/ISuperchainERC20.sol";
+import { IL2ToL2CrossDomainMessenger } from "@contracts-bedrock/L2/interfaces/IL2ToL2CrossDomainMessenger.sol";
+import { ISuperchainTokenBridge } from "@contracts-bedrock/L2/interfaces/ISuperchainTokenBridge.sol";
+//import { L2ToL2CrossDomainMessenger } from "@contracts-bedrock/L2/L2ToL2CrossDomainMessenger.sol";
+//import { SuperchainTokenBridge } from "@contracts-bedrock/L2/SuperchainTokenBridge.sol";
 
 /// @custom:proxied true
 /// @custom:predeploy 0x4200000000000000000000000000000000000028
@@ -15,10 +19,39 @@ import { IL2ToL2CrossDomainMessenger } from "src/L2/interfaces/IL2ToL2CrossDomai
 /// @notice The SuperchainTokenBridge allows for the bridging of ERC20 tokens to make them fungible across the
 ///         Superchain. It builds on top of the L2ToL2CrossDomainMessenger for both replay protection and domain
 ///         binding.
-contract SuperchainTokenBridge {
+contract SuperchainTokenBridge is Initializable {
     /// @notice Thrown when attempting to relay a message and the cross domain message sender is not the
     /// SuperchainTokenBridge.
     error InvalidCrossDomainSender();
+
+    L2ToL2CrossDomainMessenger public MESSENGER = new L2ToL2CrossDomainMessenger();
+    SuperchainTokenBridge BRIDGE;
+
+    IL2ToL2CrossDomainMessenger messenger;
+    ISuperchainTokenBridge bridge;
+
+    function initialize(
+        IL2ToL2CrossDomainMessenger _messenger,
+        ISuperchainTokenBridge _bridge
+    )
+        public
+        initializer
+    {
+        messenger = _messenger;
+        bridge = _bridge;
+
+    }
+    constructor(){
+        initialize({
+            _messenger: IL2ToL2CrossDomainMessenger(address(0x4200000000000000000000000000000000000023)),
+            _bridge:  ISuperchainTokenBridge(0x4200000000000000000000000000000000000028)
+            //_superchainEthBridge: ISuperchainETHBridge(superchainWEthAddress)
+
+        });
+        //MESSENGER = new L2ToL2CrossDomainMessenger();
+        //BRIDGE = new SuperchainTokenBridge();
+
+    }
 
     /// @notice Emitted when tokens are sent from one chain to another.
     /// @param token         Address of the token sent.
@@ -39,7 +72,7 @@ contract SuperchainTokenBridge {
     event RelayERC20(address indexed token, address indexed from, address indexed to, uint256 amount, uint256 source);
 
     /// @notice Address of the L2ToL2CrossDomainMessenger Predeploy.
-    address internal constant MESSENGER = Predeploys.L2_TO_L2_CROSS_DOMAIN_MESSENGER;
+    //address internal constant MESSENGER = Predeploys.L2_TO_L2_CROSS_DOMAIN_MESSENGER;
 
     /// @notice Semantic version.
     /// @custom:semver 1.0.0-beta.2
@@ -66,7 +99,7 @@ contract SuperchainTokenBridge {
         ISuperchainERC20(_token).crosschainBurn(msg.sender, _amount);
 
         bytes memory message = abi.encodeCall(this.relayERC20, (_token, msg.sender, _to, _amount));
-        msgHash_ = IL2ToL2CrossDomainMessenger(MESSENGER).sendMessage(_chainId, address(this), message);
+        msgHash_ = IL2ToL2CrossDomainMessenger(address(MESSENGER)).sendMessage(_chainId, address(this), message);
 
         emit SendERC20(_token, msg.sender, _to, _amount, _chainId);
     }
@@ -78,10 +111,10 @@ contract SuperchainTokenBridge {
     /// @param _to      Address to relay tokens to.
     /// @param _amount  Amount of tokens to relay.
     function relayERC20(address _token, address _from, address _to, uint256 _amount) external {
-        if (msg.sender != MESSENGER) revert Unauthorized();
+        if (msg.sender != address(MESSENGER)) revert Unauthorized();
 
         (address crossDomainMessageSender, uint256 source) =
-            IL2ToL2CrossDomainMessenger(MESSENGER).crossDomainMessageContext();
+            IL2ToL2CrossDomainMessenger(address(MESSENGER)).crossDomainMessageContext();
         if (crossDomainMessageSender != address(this)) revert InvalidCrossDomainSender();
 
         ISuperchainERC20(_token).crosschainMint(_to, _amount);

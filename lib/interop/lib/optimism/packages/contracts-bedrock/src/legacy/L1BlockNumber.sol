@@ -2,11 +2,11 @@
 pragma solidity 0.8.15;
 
 // Libraries
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IL1Block } from "src/L2/interfaces/IL1Block.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IL1Block } from "@contracts-bedrock/L2/interfaces/IL1Block.sol";
 
 /// @custom:legacy true
 /// @custom:proxied true

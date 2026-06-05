@@ -4,8 +4,8 @@ pragma solidity 0.8.15;
 import { GnosisSafe as Safe } from "safe-contracts/GnosisSafe.sol";
 import { Enum } from "safe-contracts/common/Enum.sol";
 import { OwnerManager } from "safe-contracts/base/OwnerManager.sol";
-import { LivenessGuard } from "src/safe/LivenessGuard.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { LivenessGuard } from "@contracts-bedrock/safe/LivenessGuard.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 
 /// @title LivenessModule
 /// @notice This module is intended to be used in conjunction with the LivenessGuard. In the event

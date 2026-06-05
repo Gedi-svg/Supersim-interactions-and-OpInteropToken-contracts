@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { OPContractsManager } from "src/L1/OPContractsManager.sol";
-import { ISuperchainConfig } from "src/L1/interfaces/ISuperchainConfig.sol";
-import { IProtocolVersions } from "src/L1/interfaces/IProtocolVersions.sol";
-import { IResourceMetering } from "src/L1/interfaces/IResourceMetering.sol";
-import { ISystemConfig } from "src/L1/interfaces/ISystemConfig.sol";
+import { OPContractsManager } from "@contracts-bedrock/L1/OPContractsManager.sol";
+import { ISuperchainConfig } from "@contracts-bedrock/L1/interfaces/ISuperchainConfig.sol";
+import { IProtocolVersions } from "@contracts-bedrock/L1/interfaces/IProtocolVersions.sol";
+import { IResourceMetering } from "@contracts-bedrock/L1/interfaces/IResourceMetering.sol";
+import { ISystemConfig } from "@contracts-bedrock/L1/interfaces/ISystemConfig.sol";
 
 /// @custom:proxied true
 contract OPContractsManagerInterop is OPContractsManager {

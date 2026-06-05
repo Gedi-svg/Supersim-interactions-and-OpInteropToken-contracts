@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.15;
 
-import { InvalidExitedValue } from "src/cannon/libraries/CannonErrors.sol";
+import { InvalidExitedValue } from "@contracts-bedrock/cannon/libraries/CannonErrors.sol";
 
 library MIPSState {
     struct CpuScalars {

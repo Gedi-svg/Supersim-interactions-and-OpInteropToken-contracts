@@ -2,17 +2,17 @@
 pragma solidity 0.8.15;
 
 // Contracts
-import { WETH98 } from "src/universal/WETH98.sol";
+import { WETH98 } from "@contracts-bedrock/universal/WETH98.sol";
 
 // Libraries
-import { Predeploys } from "src/libraries/Predeploys.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IL1Block } from "src/L2/interfaces/IL1Block.sol";
-import { IETHLiquidity } from "src/L2/interfaces/IETHLiquidity.sol";
-import { ICrosschainERC20 } from "src/L2/interfaces/ICrosschainERC20.sol";
-import { Unauthorized, NotCustomGasToken } from "src/libraries/errors/CommonErrors.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IL1Block } from "@contracts-bedrock/L2/interfaces/IL1Block.sol";
+import { IETHLiquidity } from "@contracts-bedrock/L2/interfaces/IETHLiquidity.sol";
+import { ICrosschainERC20 } from "@contracts-bedrock/L2/interfaces/ICrosschainERC20.sol";
+import { Unauthorized, NotCustomGasToken } from "@contracts-bedrock/libraries/errors/CommonErrors.sol";
 
 /// @custom:proxied true
 /// @custom:predeploy 0x4200000000000000000000000000000000000024

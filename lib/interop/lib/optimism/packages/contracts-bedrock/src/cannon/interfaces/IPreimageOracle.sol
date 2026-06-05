@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import { LibKeccak } from "@lib-keccak/LibKeccak.sol";
-import { LPPMetaData } from "src/cannon/libraries/CannonTypes.sol";
+import { LPPMetaData } from "@contracts-bedrock/cannon/libraries/CannonTypes.sol";
 
 interface IPreimageOracle {
     struct Leaf {

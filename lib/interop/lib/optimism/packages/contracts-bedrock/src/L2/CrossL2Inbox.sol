@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
-import { Predeploys } from "src/libraries/Predeploys.sol";
-import { TransientContext, TransientReentrancyAware } from "src/libraries/TransientContext.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { ICrossL2Inbox } from "src/L2/interfaces/ICrossL2Inbox.sol";
-import { SafeCall } from "src/libraries/SafeCall.sol";
-import { IDependencySet } from "src/L2/interfaces/IDependencySet.sol";
-import { IL1BlockInterop } from "src/L2/interfaces/IL1BlockInterop.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
+import { TransientContext, TransientReentrancyAware } from "@contracts-bedrock/libraries/TransientContext.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { ICrossL2Inbox } from "@contracts-bedrock/L2/interfaces/ICrossL2Inbox.sol";
+import { SafeCall } from "@contracts-bedrock/libraries/SafeCall.sol";
+import { IDependencySet } from "@contracts-bedrock/L2/interfaces/IDependencySet.sol";
+import { IL1BlockInterop } from "@contracts-bedrock/L2/interfaces/IL1BlockInterop.sol";
 
 /// @notice Thrown when the caller is not DEPOSITOR_ACCOUNT when calling `setInteropStart()`
 error NotDepositor();

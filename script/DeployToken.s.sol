@@ -2,15 +2,15 @@
 pragma solidity 0.8.25;
 
 import {Script} from "lib/forge-std/src/Script.sol";
-import {OpInteropToken} from "src/OpInteropToken.sol";
+import {OpInteropToken} from "@app/OpInteropToken.sol";
 
 contract DeployToken is Script {
     
     function run() public returns(OpInteropToken) {
         uint256 privateKey = vm.envUint("ACCOUNT1_PRIVATE_KEY");
         vm.startBroadcast(privateKey);
-        OpInteropToken op_token = new OpInteropToken{salt: "token"}();
+        OpInteropToken opToken = new OpInteropToken{salt: "token"}();
         vm.stopBroadcast();
-        return op_token;
+        return opToken;
     }
 }

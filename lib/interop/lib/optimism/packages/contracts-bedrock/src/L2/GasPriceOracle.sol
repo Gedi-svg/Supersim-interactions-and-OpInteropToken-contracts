@@ -3,12 +3,12 @@ pragma solidity 0.8.15;
 
 // Libraries
 import { LibZip } from "@solady/utils/LibZip.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
-import { Constants } from "src/libraries/Constants.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
+import { Constants } from "@contracts-bedrock/libraries/Constants.sol";
 
 // Interfaces
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { IL1Block } from "src/L2/interfaces/IL1Block.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { IL1Block } from "@contracts-bedrock/L2/interfaces/IL1Block.sol";
 
 /// @custom:proxied true
 /// @custom:predeploy 0x420000000000000000000000000000000000000F

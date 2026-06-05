@@ -1,16 +1,17 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.25;
 
-import { Encoding } from "src/libraries/Encoding.sol";
-import { Hashing } from "src/libraries/Hashing.sol";
-import { Predeploys } from "src/libraries/Predeploys.sol";
-import { CrossL2Inbox } from "src/L2/CrossL2Inbox.sol";
-import { ICrossL2Inbox } from "src/L2/interfaces/ICrossL2Inbox.sol";
-import { IL2ToL2CrossDomainMessenger } from "src/L2/interfaces/IL2ToL2CrossDomainMessenger.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
-import { SafeCall } from "src/libraries/SafeCall.sol";
-import { TransientReentrancyAware } from "src/libraries/TransientContext.sol";
+import { Encoding } from "@contracts-bedrock/libraries/Encoding.sol";
+import { Hashing } from "@contracts-bedrock/libraries/Hashing.sol";
+import { Predeploys } from "@contracts-bedrock/libraries/Predeploys.sol";
+import { CrossL2Inbox } from "@contracts-bedrock/L2/CrossL2Inbox.sol";
+import { ICrossL2Inbox } from "@contracts-bedrock/L2/interfaces/ICrossL2Inbox.sol";
 
+import { IL2ToL2CrossDomainMessenger } from "@contracts-bedrock/L2/interfaces/IL2ToL2CrossDomainMessenger.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
+import { SafeCall } from "@contracts-bedrock/libraries/SafeCall.sol";
+import { TransientReentrancyAware } from "@contracts-bedrock/libraries/TransientContext.sol";
+import { Initializable } from "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 /// @notice Thrown when a non-written slot in transient storage is attempted to be read from.
 error NotEntered();
 
@@ -73,7 +74,29 @@ contract L2ToL2CrossDomainMessenger is IL2ToL2CrossDomainMessenger, ISemver, Tra
     /// @notice Mapping of message hashes to boolean receipt values. Note that a message will only be present in this
     ///         mapping if it has successfully been relayed on this chain, and can therefore not be relayed again.
     mapping(bytes32 => bool) public successfulMessages;
+    /*
+    IL2ToL2CrossDomainMessenger messenger;
+    //ISuperchainTokenBridge bridge;
+    function initialize(
+        IL2ToL2CrossDomainMessenger _messenger
+        //ISuperchainTokenBridge _bridge
+    )
+        public
+        initializer
+    {
+        messenger = _messenger;
+        //bridge = _bridge;
 
+    }
+    constructor(){
+        initialize({
+            _messenger: IL2ToL2CrossDomainMessenger(address(0x4200000000000000000000000000000000000023))
+            //_bridge:  ISuperchainTokenBridge(0x4200000000000000000000000000000000000028)
+            //_superchainEthBridge: ISuperchainETHBridge(superchainWEthAddress)
+
+        });
+    }
+    */
     /// @notice Nonce for the next message to be sent, without the message version applied. Use the messageNonce getter,
     ///         which will insert the message version into the nonce to give you the actual nonce to be used for the
     ///         message.

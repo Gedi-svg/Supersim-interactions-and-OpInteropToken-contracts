@@ -3,9 +3,9 @@ pragma solidity 0.8.15;
 
 import { GnosisSafe as Safe } from "safe-contracts/GnosisSafe.sol";
 import { Guard as BaseGuard } from "safe-contracts/base/GuardManager.sol";
-import { SafeSigners } from "src/safe/SafeSigners.sol";
+import { SafeSigners } from "@contracts-bedrock/safe/SafeSigners.sol";
 import { Enum } from "safe-contracts/common/Enum.sol";
-import { ISemver } from "src/universal/interfaces/ISemver.sol";
+import { ISemver } from "@contracts-bedrock/universal/interfaces/ISemver.sol";
 import { EnumerableSet } from "@openzeppelin/contracts/utils/structs/EnumerableSet.sol";
 
 /// @title LivenessGuard
